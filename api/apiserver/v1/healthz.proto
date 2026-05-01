@@ -1,0 +1,31 @@
+// Healthz API 定义，包含健康检查的响应消息和状态。
+syntax = "proto3"; // 指定本文件使用的语法版本。
+
+package apiserver.v1;
+
+option go_package = "github.com/clin211/linhub/api/apiserver/v1;v1";
+
+// ServiceStatus 表示服务的健康状态。
+enum ServiceStatus {
+    // Healthy 表示服务处于健康状态。
+    Healthy = 0;
+
+    // Unhealthy 表示服务处于不健康状态。
+    Unhealthy = 1;
+}
+
+// HealthzResponse 表示健康检查的响应结构。
+message HealthzResponse {
+    // status 表示服务的健康状态。
+    ServiceStatus status = 1;
+
+    // timestamp 表示请求的时间戳。
+    string timestamp = 2;
+
+    // message 表示可选的状态消息，提供有关
+    // 服务健康状况的额外信息。
+    string message = 3;
+
+    // version 表示服务的版本。
+    string version = 4;
+}
