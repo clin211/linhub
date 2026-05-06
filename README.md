@@ -208,7 +208,7 @@ go test ./...
 
 ## 工具链集成（可选）
 
-命令行脚手架 [linctl](https://github.com/clin211/lin) 生成的项目常默认依赖本模块，并可在 monorepo 中使用 `replace` 指向本地 `linhub`。业务代码应**直接 import 本模块**，避免在业务仓库中复制与 `linhub` 重复的底座代码。
+命令行脚手架 [linctl](https://github.com/clin211/linctl) 生成的项目常默认依赖本模块，并可在 monorepo 中使用 `replace` 指向本地 `linhub`。业务代码应**直接 import 本模块**，避免在业务仓库中复制与 `linhub` 重复的底座代码。
 
 ---
 
